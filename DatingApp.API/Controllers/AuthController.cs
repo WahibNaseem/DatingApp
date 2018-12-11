@@ -59,7 +59,7 @@ namespace DatingApp.API.Controllers
             var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8
                             .GetBytes(this._config.GetSection("AppSettings:Token").Value));
 
-            var creds =  new SigningCredentials(key,SecurityAlgorithms.HmacSha512Signature);
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
@@ -72,9 +72,11 @@ namespace DatingApp.API.Controllers
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
 
-            return Ok(new {
+            return Ok(new
+            {
                 token = tokenHandler.WriteToken(token)
             });
+
         }
     }
 }
