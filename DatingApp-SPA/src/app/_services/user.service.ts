@@ -16,15 +16,19 @@ import { User } from './../_models/user';
 export class UserService {
   baseUrl = environment.apiUrl;
 
-constructor(private httpclient: HttpClient) { }
+  constructor(private httpclient: HttpClient) { }
 
 
-getUsers(): Observable<User[]> {
-  return this.httpclient.get<User[]>(this.baseUrl + 'users');
-}
+  getUsers(): Observable<User[]> {
+    return this.httpclient.get<User[]>(this.baseUrl + 'users');
+  }
 
-getUser(id): Observable<User> {
-return this.httpclient.get<User>(this.baseUrl + 'users/' + id );
-}
+  getUser(id: any): Observable<User> {
+    return this.httpclient.get<User>(this.baseUrl + 'users/' + id);
+  }
+
+  updateUser(id: number, user: User) {
+    return this.httpclient.put(this.baseUrl + 'users/' + id , user);
+  }
 
 }
