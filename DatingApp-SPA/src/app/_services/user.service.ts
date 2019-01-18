@@ -31,4 +31,12 @@ export class UserService {
     return this.httpclient.put(this.baseUrl + 'users/' + id , user);
   }
 
+  setMainPhoto(userId: number , id: number) {
+    return this.httpclient.post(this.baseUrl + 'users/' + userId + '/photos/' + id + '/setMain',{});
+  }
+
+  deletePhoto(userId: number , id: number) {
+    return this.httpclient.delete(this.baseUrl + 'users/' + userId + '/photos/' + id);
+  }
+
 }
