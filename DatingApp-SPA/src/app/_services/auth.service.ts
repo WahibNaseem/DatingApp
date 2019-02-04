@@ -42,7 +42,8 @@ export class AuthService {
   register(user: User) {
     return this.http.post(this.baseUrl + 'register', user);
   }
-
+ 
+  // Need further work on this method
   loggedIn() {
     const token = localStorage.getItem('token');
     return !this.jwtHelper.isTokenExpired(token);

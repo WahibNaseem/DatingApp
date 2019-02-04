@@ -21,31 +21,38 @@ export class UserService {
   constructor(private httpclient: HttpClient) { }
 
 
-  getUsers(page?, itemsPerPage? , userParams?): Observable<PaginatedResult<User[]>> {
-    
+  getUsers(page?, itemsPerPage?, userParams?, likesParam?): Observable<PaginatedResult<User[]>> {
+
     const paginatedResult: PaginatedResult<User[]> = new PaginatedResult<User[]>();
 
     let params = new HttpParams();
 
-    if (page != null && itemsPerPage != null) {      
+    if (page != null && itemsPerPage != null) {
       params = params.append('pageNumber', page);
       params = params.append('pageSize', itemsPerPage);
     }
 
-    if(userParams != null) {
+    if (userParams != null) {
       params = params.append('minAge', userParams.minAge);
       params = params.append('maxAge', userParams.maxAge);
       params = params.append('gender', userParams.gender);
       params = params.append('orderBy', userParams.orderBy);
     }
 
-    return this.httpclient.get<User[]>(this.baseUrl + 'users',  { observe: 'response', params })
+    if (likesParam === 'Liker') {
+      params = params.append('likers', 'true');
+    }
+    if (likesParam === 'Likess') {
+      params = params.append('likees', 'true');
+    }
+
+    return this.httpclient.get<User[]>(this.baseUrl + 'users', { observe: 'response', params })
       .pipe(
-        map( response =>{
+        map(response => {
           paginatedResult.result = response.body;
-          if(response.headers.get('Pagination') !=null){
+          if (response.headers.get('Pagination') != null) {
             paginatedResult.pagination = JSON.parse(response.headers.get('Pagination'));
-          }          
+          }
           return paginatedResult;
         })
       );
@@ -65,6 +72,10 @@ export class UserService {
 
   deletePhoto(userId: number, id: number) {
     return this.httpclient.delete(this.baseUrl + 'users/' + userId + '/photos/' + id);
+  }
+
+  sendLike(id: number, recipientId: number) {
+    return this.httpclient.post(this.baseUrl + 'users/' + id + '/like/' + recipientId, {});
   }
 
 }
