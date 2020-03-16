@@ -1,7 +1,7 @@
 using System;
-using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.IdentityModel.Tokens.Jwt;
 using AutoMapper;
 using DatingApp.API.Data;
 using DatingApp.API.Dtos;
