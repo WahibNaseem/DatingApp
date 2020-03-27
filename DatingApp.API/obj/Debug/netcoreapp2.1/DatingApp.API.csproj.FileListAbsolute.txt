@@ -7,7 +7,7 @@ C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.
 C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.1\DatingApp.API.runtimeconfig.dev.json
 C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.1\DatingApp.API.dll
 C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\bin\Debug\netcoreapp2.1\DatingApp.API.pdb
-C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.1\DatingApp.API.csprojAssemblyReference.cache
+C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.1\DatingApp.API.csproj.CoreCompileInputs.cache
 C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.1\DatingApp.API.RazorAssemblyInfo.cache
 C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.1\DatingApp.API.RazorAssemblyInfo.cs
 C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.1\DatingApp.API.AssemblyInfoInputs.cache
@@ -15,3 +15,5 @@ C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.
 C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.1\DatingApp.API.RazorTargetAssemblyInfo.cache
 C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.1\DatingApp.API.dll
 C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.1\DatingApp.API.pdb
+C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.1\DatingApp.API.genruntimeconfig.cache
+C:\code workcamp\Tutorial\chatapp\DatingApp\DatingApp.API\obj\Debug\netcoreapp2.1\DatingApp.API.csprojAssemblyReference.cache

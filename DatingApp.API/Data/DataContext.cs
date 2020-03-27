@@ -15,6 +15,12 @@ namespace DatingApp.API.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            ////Configure Users Table
+            builder.Entity<User>().ToTable("Users");
+            builder.Entity<User>().HasKey(x => x.Id);
+
+            builder.Entity<User>().Property(x => x.Id).IsRequired().ValueGeneratedOnAdd();
+
             // We have created a Primary key for likes
             builder.Entity<Like>()
                     .HasKey(k => new { k.LikerId, k.LikeeId });
