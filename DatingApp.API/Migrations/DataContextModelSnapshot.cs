@@ -42,7 +42,9 @@ namespace DatingApp.API.Migrations
 
                     b.Property<DateTime?>("DateRead");
 
-                    b.Property<int>("Id");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<bool>("IsRead");
 

@@ -131,9 +131,11 @@ namespace DatingApp.API.Data
 
         public async Task<PagedList<Message>> GetMessagesForUser(MessageParams messageParams)
         {
-            var messages = _context.Messages.Include(s => s.Sender).ThenInclude(p => p.Photos)
-                            .Include(r => r.Recipient).ThenInclude(p => p.Photos)
-                            .AsQueryable();
+            var messages = _context.Messages.Include(s => s.Sender)
+                                            .ThenInclude(p => p.Photos)
+                                            .Include(r => r.Recipient)
+                                            .ThenInclude(p => p.Photos)
+                                            .AsQueryable();
 
             switch (messageParams.MessageContainer)
             {

@@ -42,6 +42,10 @@ namespace DatingApp.API.Data
             // We are creating Primary key for the user Messages
             builder.Entity<Message>()
                     .HasKey(m => new { m.SenderId, m.RecipientId });
+
+            builder.Entity<Message>()
+                    .Property(x =>x.Id).IsRequired()
+                    .ValueGeneratedOnAdd();
  
             // I'm creating many to many RelationShip
            builder.Entity<Message>()
