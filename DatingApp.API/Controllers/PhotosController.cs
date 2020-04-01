@@ -13,7 +13,7 @@ using Microsoft.Extensions.Options;
 namespace DatingApp.API
 {
 
-    [Authorize]
+    // [Authorize]
     [Route("api/users/{userId}/photos")]
     [ApiController]
 
